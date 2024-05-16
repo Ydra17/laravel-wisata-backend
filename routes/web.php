@@ -6,6 +6,8 @@ Route::get('/', function () {
     return view('pages.auth.login');
 });
 
-Route::get('/home', function () {
-    return view('pages.dashboard');
+Route::middleware(['auth'])->group(function () {
+    Route::get('home', function(){
+        return view('pages.dashboard', ['type_menu' => 'dashboard']);
+    })->name('home');
 });
