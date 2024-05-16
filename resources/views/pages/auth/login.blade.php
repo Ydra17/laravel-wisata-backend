@@ -24,14 +24,19 @@
                     <label for="email">Email</label>
                     <input id="email"
                         type="email"
-                        class="form-control"
+                        class="form-control @error('email')
+                            is-invalid
+                        @enderror"
                         name="email"
                         tabindex="1"
                         required
-                        autofocus>
-                    <div class="invalid-feedback">
-                        Please fill in your email
-                    </div>
+                        value="{{old('email')}}"
+                        >
+                        @error('mail')
+                            <div class="invalid-feedback">
+                                {{$message}}
+                            </div>
+                        @enderror
                 </div>
 
                 <div class="form-group">
@@ -41,13 +46,18 @@
                     </div>
                     <input id="password"
                         type="password"
-                        class="form-control"
+                        class="form-control @error('password')
+                            is-invalid
+                        @enderror"
                         name="password"
                         tabindex="2"
-                        required>
-                    <div class="invalid-feedback">
-                        please fill in your password
-                    </div>
+                        required
+                        value="{{old('password')}}">
+                        @error('password')
+                            <div class="invalid-feedback">
+                                {{$message}}
+                            </div>
+                        @enderror
                 </div>
                 <div class="form-group">
                     <button type="submit"

@@ -11,6 +11,10 @@
                 <a href="#"
                     class="nav-link"><i class="fas fa-fire"></i><span>Dashboard</span></a>
             </li>
+            <li class="nav-item dropdown {{ $type_menu === 'user' ? 'active' : '' }}">
+                <a href="{{route('users.index')}}"
+                    class="nav-link"><i class="fas fa-fire"></i><span>User</span></a>
+            </li>
         </ul>
     </aside>
 </div>
