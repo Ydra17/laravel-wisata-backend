@@ -56,8 +56,12 @@
                                             <td>Role Dummy</td>
                                             <td>
                                                 <div class="d-flex justify-content-center">
-                                                    <a href="#" class="btn btn-sm btn-primary"><i class="fas fa-edit"></i>Edit</a> &nbsp;
-                                                    <a href="#" class="btn btn-sm btn-danger"><i class="fas fa-times"></i>Delete</a>
+                                                    <a href="{{route('users.edit', $user->id)}}" class="btn btn-sm btn-primary"><i class="fas fa-edit"></i>Edit</a> &nbsp;
+                                                    <form action="{{route('users.destroy', $user->id)}}" method="POST" class="ml-2">
+                                                        <input type="hidden" name="_method" value="DELETE" />
+                                                        <input type="hidden" name="_token" value="{{csrf_token()}}" />
+                                                        <button class="btn btn-sm btn-danger"><i class="fas fa-times"></i>Delete</button>
+                                                    </form>
                                                 </div>
                                             </td>
                                         </tr>
