@@ -10,7 +10,7 @@
     <div class="main-content">
         <section class="section">
             <div class="section-header">
-                <h1>Form Validation</h1>
+                <h1>Create New User</h1>
             </div>
 
             <div class="section-body">
@@ -50,6 +50,19 @@
                                     </div>
 
                                     <div class="form-group">
+                                        <label>Phone Number</label>
+                                        <input type="text" name="phone" value="{{old('phone')}}"
+                                            class="form-control @error('phone')
+                                                is-invalid
+                                            @enderror">
+                                        @error('phone')
+                                            <div class="invalid-feedback">
+                                                {{$message}}
+                                            </div>
+                                        @enderror
+                                    </div>
+
+                                    <div class="form-group">
                                         <label>Password</label>
                                         <div class="input-group">
                                             <div class="input-group-prepend">
@@ -67,6 +80,26 @@
                                                     {{$message}}
                                                 </div>
                                             @enderror
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="form-label">Roles</label>
+                                        <div class="selectgroup w-100">
+                                            <label class="selectgroup-item">
+                                                <input type="radio" name="role" value="admin" class="selectgroup-input"
+                                                    checked="">
+                                                <span class="selectgroup-button">Admin</span>
+                                            </label>
+                                            <label class="selectgroup-item">
+                                                <input type="radio" name="role" value="user" class="selectgroup-input">
+                                                <span class="selectgroup-button">User</span>
+                                            </label>
+                                            <label class="selectgroup-item">
+                                                <input type="radio" name="role" value="staff" class="selectgroup-input">
+                                                <span class="selectgroup-button">Staff</span>
+                                            </label>
+
                                         </div>
                                     </div>
                                 </div>

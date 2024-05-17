@@ -52,8 +52,8 @@
                                         <tr>
                                             <td>{{$user->name}}</td>
                                             <td>{{$user->email}}</td>
-                                            <td>Dummy</td>
-                                            <td>Role Dummy</td>
+                                            <td>{{$user->phone}}</td>
+                                            <td>{{$user->role}}</td>
                                             <td>
                                                 <div class="d-flex justify-content-center">
                                                     <a href="{{route('users.edit', $user->id)}}" class="btn btn-sm btn-primary"><i class="fas fa-edit"></i>Edit</a> &nbsp;

@@ -29,12 +29,15 @@ class UserController extends Controller
             'name' => 'required',
             'email' => 'required|email',
             'password' => 'required|min:8',
+            'role' => 'required',
         ]);
 
         User::create([
             'name'=>$request->name,
             'email'=>$request->email,
             'password'=>Hash::make($request->password),
+            'phone' => $request->phone,
+            'role' => $request->role,
         ]);
 
         return redirect()->route('users.index')->with('success', 'User Created Successfully');
