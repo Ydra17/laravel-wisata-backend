@@ -50,7 +50,18 @@
                                         @enderror
                                     </div>
 
-
+                                    <div class="form-group">
+                                        <label>Phone Number</label>
+                                        <input type="text" name="phone" value="{{$user->phone}}"
+                                            class="form-control @error('phone')
+                                                is-invalid
+                                            @enderror">
+                                        @error('phone')
+                                            <div class="invalid-feedback">
+                                                {{$message}}
+                                            </div>
+                                        @enderror
+                                    </div>
 
                                     <div class="form-group">
                                         <label>Password</label>
@@ -72,6 +83,34 @@
                                             @enderror
                                         </div>
                                     </div>
+
+                                    <div class="form-group">
+                                        <label class="form-label">Roles</label>
+                                        <div class="selectgroup w-100">
+                                            <label class="selectgroup-item">
+                                                <input type="radio" name="role" value="admin" class="selectgroup-input"
+                                                    @if ($user->role == 'admin')
+                                                        checked
+                                                    @endif>
+                                                <span class="selectgroup-button">Admin</span>
+                                            </label>
+                                            <label class="selectgroup-item">
+                                                <input type="radio" name="role" value="user" class="selectgroup-input"
+                                                    @if ($user->role == 'user')
+                                                        checked
+                                                    @endif>
+                                                <span class="selectgroup-button">User</span>
+                                            </label>
+                                            <label class="selectgroup-item">
+                                                <input type="radio" name="role" value="staff" class="selectgroup-input"
+                                                    @if ($user->role == 'staff')
+                                                        checked
+                                                    @endif>
+                                                <span class="selectgroup-button">Staff</span>
+                                            </label>
+                                        </div>
+                                    </div>
+
                                 </div>
                                 <div class="card-footer text-right">
                                     <button class="btn btn-primary">Submit</button>

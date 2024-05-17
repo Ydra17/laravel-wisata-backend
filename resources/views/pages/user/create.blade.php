@@ -87,8 +87,7 @@
                                         <label class="form-label">Roles</label>
                                         <div class="selectgroup w-100">
                                             <label class="selectgroup-item">
-                                                <input type="radio" name="role" value="admin" class="selectgroup-input"
-                                                    checked="">
+                                                <input type="radio" name="role" value="admin" class="selectgroup-input">
                                                 <span class="selectgroup-button">Admin</span>
                                             </label>
                                             <label class="selectgroup-item">
@@ -99,9 +98,9 @@
                                                 <input type="radio" name="role" value="staff" class="selectgroup-input">
                                                 <span class="selectgroup-button">Staff</span>
                                             </label>
-
                                         </div>
                                     </div>
+
                                 </div>
                                 <div class="card-footer text-right">
                                     <button class="btn btn-primary">Submit</button>

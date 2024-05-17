@@ -53,11 +53,16 @@ class UserController extends Controller
         $request->validate([
             'name' => 'required',
             'email' => 'required|email',
+            'phone' => 'required',
+            'role' => 'required',
+
         ]);
 
         $user->update([
             'name' => $request->name,
             'email' => $request->email,
+            'phone' => $request->phone,
+            'role' => $request->role,
         ]);
 
         // if password updated
