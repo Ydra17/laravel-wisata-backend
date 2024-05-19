@@ -21,4 +21,9 @@ class Product extends Model
         'favorite',
     ];
 
+    public function category()
+    {
+        return $this->belongsTo(category::class);
+    }
+
 }

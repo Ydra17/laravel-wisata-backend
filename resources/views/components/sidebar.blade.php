@@ -19,6 +19,10 @@
                 <a href="{{route('categories.index')}}"
                     class="nav-link"><i class="fas fa-fire"></i><span>Categories</span></a>
             </li>
+            <li class="nav-item dropdown {{ $type_menu === 'product' ? 'active' : '' }}">
+                <a href="{{route('products.index')}}"
+                    class="nav-link"><i class="fas fa-fire"></i><span>Products</span></a>
+            </li>
         </ul>
     </aside>
 </div>
