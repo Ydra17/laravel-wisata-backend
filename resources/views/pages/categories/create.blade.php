@@ -19,9 +19,9 @@
                         <div class="card">
                             <form method="POST" action="{{route('categories.store')}}">
                                 @csrf
-                                <div class="card-header">
+                                {{-- <div class="card-header">
                                     <h4>Create New Category</h4>
-                                </div>
+                                </div> --}}
                                 <div class="card-body">
                                     <div class="form-group">
                                         <label>Name</label>

@@ -20,9 +20,9 @@
                             <form method="POST" action="{{route('categories.update', $category)}}">
                                 @csrf
                                 @method('PUT')
-                                <div class="card-header">
+                                {{-- <div class="card-header">
                                     <h4>Edit Category {{$category->name}}</h4>
-                                </div>
+                                </div> --}}
                                 <div class="card-body">
                                     <div class="form-group">
                                         <label>Name</label>

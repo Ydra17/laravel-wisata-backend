@@ -10,7 +10,7 @@
     <div class="main-content">
         <section class="section">
             <div class="section-header">
-                <h1>Form Validation</h1>
+                <h1>Edit {{$user->name}}</h1>
             </div>
 
             <div class="section-body">
@@ -20,9 +20,9 @@
                             <form method="POST" action="{{route('users.update', $user)}}">
                                 @csrf
                                 @method('PUT')
-                                <div class="card-header">
+                                {{-- <div class="card-header">
                                     <h4>Create New User</h4>
-                                </div>
+                                </div> --}}
                                 <div class="card-body">
                                     <div class="form-group">
                                         <label>Name</label>

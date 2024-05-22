@@ -21,9 +21,9 @@
                             <form method="POST" enctype="multipart/form-data" action="{{route('products.update', $product)}}">
                                 @csrf
                                 @method('PUT')
-                                <div class="card-header">
+                                {{-- <div class="card-header">
                                     <h4>Edit Product {{$product->name}}</h4>
-                                </div>
+                                </div> --}}
                                 <div class="card-body">
                                     <div class="form-group">
                                         <label>Name</label>

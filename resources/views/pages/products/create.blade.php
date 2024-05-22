@@ -19,9 +19,9 @@
                         <div class="card">
                             <form method="POST" enctype="multipart/form-data" action="{{route('products.store')}}">
                                 @csrf
-                                <div class="card-header">
+                                {{-- <div class="card-header">
                                     <h4>Add New Product</h4>
-                                </div>
+                                </div> --}}
                                 <div class="card-body">
                                     <div class="form-group">
                                         <label>Name</label>
