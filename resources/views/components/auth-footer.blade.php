@@ -1,3 +1,3 @@
   <div class="simple-footer">
-      Copyright &copy; Stisla 2018
+      Make with <i class="fa-solid fa-heart"></i>, By Ardyanto
   </div>
