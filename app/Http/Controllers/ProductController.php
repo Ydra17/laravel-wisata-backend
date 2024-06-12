@@ -54,6 +54,7 @@ class ProductController extends Controller
         $image = $request->file('image');
         $image->storeAs('public/products', $product->id . '.' . $image->extension());
         $product->image = 'products/' . $product->id . '.' . $image->extension();
+        // dd($product->image);
         $product->save();
 
         return redirect()->route('product.index')->with('success', 'Product Created Successfully');
