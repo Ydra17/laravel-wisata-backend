@@ -19,16 +19,16 @@ class ProductController extends Controller
 
     public function store(Request $request)
     {
-        // $request->validate([
-        //     'category_id' => 'required',
-        //     'name' => 'required',
-        //     'price' => 'required',
-        //     'image' => 'required',
-        //     'criteria' => 'required',
-        //     'favorite' => 'required',
-        //     'status' => 'required',
-        //     'stock' => 'required',
-        //     ]);
+        $request->validate([
+            'category_id' => 'required',
+            'name' => 'required',
+            'price' => 'required',
+            'image' => 'required',
+            'criteria' => 'required',
+            'favorite' => 'required',
+            'status' => 'required',
+            'stock' => 'required',
+            ]);
         // dd("masuk");
 
         $product = new Product;
@@ -44,7 +44,7 @@ class ProductController extends Controller
 
         if ($request->file('image')) {
             $image = $request->file('image');
-            $image->storeAs('public/products', $product->id . 'tes.' . $image->extension());
+            $image->storeAs('public/products', $product->id . '.' . $image->extension());
             $product->image = 'products/' . $product->id . '.' . $image->extension();
             $product->save();
         }
