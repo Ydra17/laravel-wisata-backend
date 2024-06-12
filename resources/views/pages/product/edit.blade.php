@@ -18,7 +18,7 @@
                 <div class="row">
                     <div class="col-12 col-md-12 col-lg-12">
                         <div class="card">
-                            <form method="POST" enctype="multipart/form-data" action="{{route('products.update', $product)}}">
+                            <form method="POST" enctype="multipart/form-data" action="{{route('product.update', $product)}}">
                                 @csrf
                                 @method('PUT')
                                 {{-- <div class="card-header">

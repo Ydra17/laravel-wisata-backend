@@ -16,11 +16,11 @@
                     class="nav-link"><i class="fa-solid fa-user"></i><span>User</span></a>
             </li>
             <li class="nav-item dropdown {{ $type_menu === 'categories' ? 'active' : '' }}">
-                <a href="{{route('categories.index')}}"
+                <a href="{{route('category.index')}}"
                     class="nav-link"><i class="fa-solid fa-list"></i><span>Categories</span></a>
             </li>
             <li class="nav-item dropdown {{ $type_menu === 'product' ? 'active' : '' }}">
-                <a href="{{route('products.index')}}"
+                <a href="{{route('product.index')}}"
                     class="nav-link"><i class="fa-regular fa-folder-open"></i><span>Products</span></a>
             </li>
         </ul>

@@ -15,7 +15,7 @@ class CategoryController extends Controller
     public function index()
     {
         $categories = Category::paginate(10);
-        return view('pages.categories.index', ['type_menu' => 'categories'], compact('categories'));
+        return view('pages.category.index', ['type_menu' => 'categories'], compact('categories'));
     }
 
     /**
@@ -23,7 +23,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        return view('pages.categories.create', ['type_menu' => 'categories']);
+        return view('pages.category.create', ['type_menu' => 'categories']);
     }
 
     /**
@@ -41,7 +41,7 @@ class CategoryController extends Controller
             'description'=>$request->description,
         ]);
 
-        return redirect()->route('categories.index')->with('success', 'Category Created Successfully');
+        return redirect()->route('category.index')->with('success', 'Category Created Successfully');
     }
 
     /**
@@ -57,7 +57,7 @@ class CategoryController extends Controller
      */
     public function edit(Category $category)
     {
-        return view('pages.categories.edit', ['type_menu' => 'categories'], compact('category'));
+        return view('pages.category.edit', ['type_menu' => 'categories'], compact('category'));
     }
 
     /**
@@ -74,7 +74,7 @@ class CategoryController extends Controller
             'name'=>$request->name,
             'description'=>$request->description,
         ]);
-        return redirect()->route('categories.index')->with('success', 'Category Updated Successfully');
+        return redirect()->route('category.index')->with('success', 'Category Updated Successfully');
     }
 
     /**
@@ -83,6 +83,6 @@ class CategoryController extends Controller
     public function destroy(Category $category)
     {
         $category->delete();
-        return redirect()->route('categories.index')->with('success', 'Category Deleted Successfully');
+        return redirect()->route('category.index')->with('success', 'Category Deleted Successfully');
     }
 }

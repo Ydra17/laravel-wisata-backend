@@ -23,7 +23,7 @@
                     <div class="col-12 col-md-12 col-lg-12">
                         <div class="card">
                             <div class="card-header">
-                                <h4>Tabel Categories &nbsp; <a href="{{route('categories.create')}}" class="btn btn-primary">Add Categories  </a></h4>
+                                <h4>Tabel Categories &nbsp; <a href="{{route('category.create')}}" class="btn btn-primary">Add Categories  </a></h4>
                                 <div class="card-header-form">
                                     <form method="GET" action="{{route('categories.index')}}">
                                         <div class="input-group">
@@ -52,8 +52,8 @@
                                             <td>{{$category->description}}</td>
                                             <td>
                                                 <div class="d-flex justify-content-center">
-                                                    <a href="{{route('categories.edit', $category->id)}}" class="btn btn-sm btn-primary"><i class="fas fa-edit"></i>Edit</a> &nbsp;
-                                                    <form action="{{route('categories.destroy', $category->id)}}" method="POST" class="ml-2">
+                                                    <a href="{{route('category.edit', $category->id)}}" class="btn btn-sm btn-primary"><i class="fas fa-edit"></i>Edit</a> &nbsp;
+                                                    <form action="{{route('category.destroy', $category->id)}}" method="POST" class="ml-2">
                                                         <input type="hidden" name="_method" value="DELETE" />
                                                         <input type="hidden" name="_token" value="{{csrf_token()}}" />
                                                         <button class="btn btn-sm btn-danger"><i class="fas fa-trash"></i>Delete</button>
